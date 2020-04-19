@@ -8,7 +8,10 @@ Code and 3D models for a pretty cool Raspberry Pi "pocket protector" screen. Cos
 
 ## How to use:
 
-- connect up the hardware (see below), power up, ssh in
+- connect up the hardware (see below)
+- use the current Raspbian **Desktop** image
+- power up, ssh in to the Pi
+- optionally run `sudo raspi-config` and under "Interfacing Options", enable "VNC", so you can easily get to the desktop since it will be "headless"
 - clone this repo, and cd into it
 - run `make install` to install the screen driver
 - optionally create 1 or 2 "advert" image files:
@@ -47,7 +50,44 @@ If you are going to solder it, which is what I always do with these screens, you
 - [3D models for screen cover and part that extends into your pocket](https://www.tinkercad.com/things/0NYl0LZUKbR) (insignificant cost to print)
 - Battery, e.g., [this 5000mAh one](https://smile.amazon.com/gp/product/B07QXZ6DJL/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (~$15USD)
 
-## Software:
+## Software
 
 [Driver for the 2.8 inch screen.](https://github.com/iUniker/2.8NewDriver)
+
+## Some Suggestions
+
+I suggest:
+
+- running `sudo raspi-config` and under "Boot Options" selecting "Desktop/CLI", then configuring "Desktop, Autologin", and
+- making this program startup automatically once the desktop GUI is available.
+
+With these changes you just need to connect the battery and the Pi will boot, auto-login to the desktop, autorun this program and start up the pocket-pi code.
+
+To setup autostart of the pocket-pi code, just edit the file `/etc/xdg/lxsession/LXDE-pi/autostart` and add a line like this:
+
+```
+@/home/pi/<program>
+```
+
+Where that `<whatever>` program gets that shell into the right directory and runs the code.  E.g., here's what my autostart file looks like:
+
+```
+pi@pocketpi:~ $ cat  /etc/xdg/lxsession/LXDE-pi/autostart
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+point-rpi
+@/home/pi/GO.sh
+```
+
+And inside my `/home/pi/GO.sh` file I have this to set the right directory and run the pocket-pi code:
+
+```
+pi@pocketpi:~ $ cat GO.sh 
+#!/bin/sh
+cd /home/pi/git/pocket-pi; /home/pi/git/pocket-pi/go.sh
+pi@pocketpi:~ $ 
+```
+
+As you can see from the above, in my case I have cloned this repo into `/home/pi/git/pocket-pi`.
 
