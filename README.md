@@ -1,6 +1,14 @@
 # pocket-pi
 Code and 3D models for a Raspberry Pi "pocket protector" screen.
 
+Pocket Pi in action (no screen cover yet):
+
+![Pocket-Pi In Action](https://github.com/MegaMosquito/pocket-pi/blob/master/pocket-pi.png?raw=true)
+
+How to use:
+- edit the `go.sh` code to supply your name, and image file names (0, 1, or 2)
+- make
+
 The hardware I used for this project:
 
 - Raspberry Pi Zero-W
@@ -10,10 +18,3 @@ The hardware I used for this project:
 
 [Software setup for the 2.8 inch screen.](https://github.com/iUniker/2.8NewDriver)
 
-Pocket Pi in action:
-
-![Pocket-Pi In Action](https://github.com/MegaMosquito/pocket-pi/blob/master/pocket-pi.png?raw=true)
-
-Video of Pocket-Pi in action:
-
-  [Download Video](https://github.com/MegaMosquito/pocket-pi/blob/master/pocket-pi.mov?raw=true)
