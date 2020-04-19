@@ -8,7 +8,10 @@ Code and 3D models for a pretty cool Raspberry Pi "pocket protector" screen. Cos
 
 ## How to use:
 
-- optionally provide 1 or 2 advert image files:
+- connect up the hardware (see below), power up, ssh in
+- clone this repo, and cd into it
+- run `make install` to install the screen driver
+- optionally create 1 or 2 "advert" image files:
   - sized 640 pixels by 360 pixels
   - overwrite the ones that are here in the repo if you like
 - edit the `go.sh` script:
