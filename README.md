@@ -10,3 +10,8 @@ The hardware I used for this project:
 
 Pocket Pi in action:
 
+![Pocket-Pi In Action](https://github.com/MegaMosquito/pocket-pi/blob/master/pocket-pi.png?raw=true)
+
+Video of Pocket-Pi in action:
+
+  [Download Video](https://github.com/MegaMosquito/pocket-pi/blob/master/pocket-pi.mov?raw=true)
