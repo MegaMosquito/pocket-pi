@@ -69,10 +69,9 @@ To setup autostart of the pocket-pi code, just edit the file `/etc/xdg/lxsession
 @/home/pi/<program>
 ```
 
-Where that `<whatever>` program gets that shell into the right directory and runs the code.  E.g., here's what my autostart file looks like:
+Where that `<whatever>` program gets that shell into the right directory and runs the code.  E.g., here's what my `/etc/xdg/lxsession/LXDE-pi/autostart` file looks like:
 
 ```
-pi@pocketpi:~ $ cat  /etc/xdg/lxsession/LXDE-pi/autostart
 @lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 @xscreensaver -no-splash
@@ -83,10 +82,8 @@ point-rpi
 And inside my `/home/pi/GO.sh` file I have this to set the right directory and run the pocket-pi code:
 
 ```
-pi@pocketpi:~ $ cat GO.sh 
 #!/bin/sh
 cd /home/pi/git/pocket-pi; /home/pi/git/pocket-pi/go.sh
-pi@pocketpi:~ $ 
 ```
 
 As you can see from the above, in my case I have cloned this repo into `/home/pi/git/pocket-pi`.
