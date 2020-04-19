@@ -27,6 +27,8 @@ For this project I personally use [this tiny 5000mAh battery](https://smile.amaz
 
 ![Battery and Pi Orientation](https://github.com/MegaMosquito/pocket-pi/blob/master/photos/power-and-orientation.jpg?raw=true)
 
+To avoid wire clutter in my pocket, I soldered up my own miniature cable with a tiny switch inline (which you can see in the photo above).
+
 ## Conecting Pi and Screen
 
 To avoid soldering, you could use [hammer-in female headers](https://www.adafruit.com/product/3663?utm_source=youtube&utm_medium=videodescrip&utm_campaig?hidden=yes&main_page=product_info&part_id=3663&utm_source=youtube&utm_medium=videodescrip&utm_campaig). Adafruit rules.
