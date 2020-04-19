@@ -63,13 +63,13 @@ I suggest:
 
 With these changes you just need to connect the battery and the Pi will boot, auto-login to the desktop, autorun this program and start up the pocket-pi code.
 
-To setup autostart of the pocket-pi code, just edit the file `/etc/xdg/lxsession/LXDE-pi/autostart` and add a line like this:
+To setup autostart of the pocket-pi code, just use `sudo` to edit the file `/etc/xdg/lxsession/LXDE-pi/autostart` and add a line like this:
 
 ```
 @/home/pi/<program>
 ```
 
-Where that `<whatever>` program gets that shell into the right directory and runs the code.  E.g., here's what my `/etc/xdg/lxsession/LXDE-pi/autostart` file looks like:
+Where that `<whatever>` program moves that shell into the right directory and runs the code.  E.g., here's what my `/etc/xdg/lxsession/LXDE-pi/autostart` file looks like:
 
 ```
 @lxpanel --profile LXDE-pi
@@ -79,7 +79,7 @@ point-rpi
 @/home/pi/GO.sh
 ```
 
-And inside my `/home/pi/GO.sh` file I have this to set the right directory and run the pocket-pi code:
+And inside my `/home/pi/GO.sh` file I use the code below to set the right directory and run the pocket-pi code:
 
 ```
 #!/bin/sh
