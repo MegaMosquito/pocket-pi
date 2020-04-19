@@ -12,5 +12,5 @@ export MY_NAME=Glen
 export MY_ADVERTS="advert0.png,advert1.png"
 
 # Run the page-flipper program forever, in the background
-/usr/bin/make dev
+/usr/bin/make
 
